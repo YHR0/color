@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/maintextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#39f"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:text="功能选择主页面" />
+
+    <Button
+        android:id="@+id/mainbuttonidentifying"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="识别物品" />
+
+    <Button
+        android:id="@+id/mainbuttonstore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="采集绑定物品" />
+
+    <Button
+        android:id="@+id/mainbuttondisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看删除物品" />
+
+    <Button
+        android:id="@+id/mainbuttonRange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="波动范围参数" />
+</LinearLayout>
+

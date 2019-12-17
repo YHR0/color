@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Range">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="波动范围调整页面"
+        android:textColor="#39f"
+        android:textSize="50dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="数字1是软件默认设定（也可输入0 使用默认设定）" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="大于数字1则缩小波动范围" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="小于数字1则扩大波动范围" />
+
+    <TextView
+        android:id="@+id/textView162"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="建议数字：0.5,0.75,1,1.25,1.5,1.75,2" />
+    <EditText
+        android:id="@+id/rangeetext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:digits="@string/alphabet_and_number"
+        android:ems="10"
+        android:hint="动态波动范围数字：在此输入"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/range"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="queren"
+        android:text="动态波动数字确认" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="固定波动范围数字：可固定扩大参数的最小值最大值" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="建议数字：3-15之间（软件默认5）" />
+
+    <EditText
+        android:id="@+id/editTextguding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="固定波动数字：在此输入"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="guding"
+        android:text="固定波动数字确认" />
+
+</LinearLayout>

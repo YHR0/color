@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Colorrecognition</string>
+    <string name="Dynamicnumber">1</string>
+    <string name="fixednumber">5</string>
+    <integer name="aaa">8</integer>
+    <string name="alphabet_and_number">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+
+</resources>
