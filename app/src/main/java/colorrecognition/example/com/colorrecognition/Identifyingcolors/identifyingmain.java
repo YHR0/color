@@ -204,12 +204,13 @@ public class identifyingmain extends SerialPortActivity {
                                 shu=shu+127;
                                 buf[b]=shu;
                             }
+                            buf=HSV.HSVnum(buf);
                             identitytv.setText("已检测到传感器数据");
                             identityred.setText(String.valueOf(buf[0]));
                             identitygreen.setText(String.valueOf(buf[1]));
                             identityblue.setText(String.valueOf(buf[2]));
                             identityGoods.setText("已识别到绑定的物品");
-                            buf=HSV.HSVnum(buf);
+
                             String[][] data=sqldata.query(identifyingmain.this,buf[0],buf[1],buf[2]);
                             String string="";
                             if (data.length==1){//成功识别到对应的物品
