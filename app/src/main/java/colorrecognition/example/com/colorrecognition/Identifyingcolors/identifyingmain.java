@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import java.io.IOException;
 
+import colorrecognition.example.com.colorrecognition.HSV;
 import colorrecognition.example.com.colorrecognition.R;
 import colorrecognition.example.com.colorrecognition.SerialPortActivity;
 import colorrecognition.example.com.colorrecognition.sql.Sqldata;
@@ -208,6 +209,7 @@ public class identifyingmain extends SerialPortActivity {
                             identitygreen.setText(String.valueOf(buf[1]));
                             identityblue.setText(String.valueOf(buf[2]));
                             identityGoods.setText("已识别到绑定的物品");
+                            buf=HSV.HSVnum(buf);
                             String[][] data=sqldata.query(identifyingmain.this,buf[0],buf[1],buf[2]);
                             String string="";
                             if (data.length==1){//成功识别到对应的物品

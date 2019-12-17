@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import colorrecognition.example.com.colorrecognition.HSV;
 import colorrecognition.example.com.colorrecognition.R;
 import colorrecognition.example.com.colorrecognition.SerialPortActivity;
 import colorrecognition.example.com.colorrecognition.sql.Sqldata;
@@ -238,11 +239,18 @@ public class storemain extends SerialPortActivity {
                                 shu=shu+127;
                                 buf[b]=shu;
                             }
+
+
+                           int[] colorVHS= HSV.HSVnum(buf);
+
+
+
+
                             HashMap<String,Object> hashMap =new HashMap<>();
                             hashMap.put("number",number+1);number++;
-                            hashMap.put("red",buf[0]);
-                            hashMap.put("green",buf[1]);
-                            hashMap.put("blue",buf[2]);
+                            hashMap.put("red",colorVHS[0]);
+                            hashMap.put("green",colorVHS[1]);
+                            hashMap.put("blue",colorVHS[2]);
                             arrayList.add(hashMap);
 
                             arrayAdapter = new SimpleAdapter(storemain.this,arrayList,R.layout.storelayout,new String[]{"number","red","green","blue"},new int[]{R.id.storetop,R.id.storered,R.id.storegreen,R.id.storeblue});
